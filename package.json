@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "html-entities": "1.0.x",
+    "levenshtein": "^1.0.5",
     "xml-flow": "^1.0.1"
   },
   "devDependencies": {
