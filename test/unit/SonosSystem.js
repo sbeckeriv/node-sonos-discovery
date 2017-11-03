@@ -221,6 +221,13 @@ describe('SonosSystem', () => {
           expect(player.roomName).equals('Office');
         });
 
+        it('Returns player with getPlayer fuzzy matching', () => {
+          var fuzzySonos = new SonosSystem({ fuzzyMatch: true });
+          let player = fuzzySonos.getPlayer('officEs');
+          expect(player).instanceOf(Player);
+          expect(player.roomName).equals('Office');
+        });
+
         it('Returns player with getPlayerByUUD', () => {
           let player = sonos.getPlayerByUUID('RINCON_20000000000001400');
           expect(player).instanceOf(Player);
